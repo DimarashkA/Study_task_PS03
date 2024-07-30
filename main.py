@@ -3,7 +3,6 @@ from bs4 import BeautifulSoup
 from googletrans import Translator
 from deep_translator import GoogleTranslator
 
-
 def get_english_words():
     url = "https://randomword.com/"
     try:
@@ -19,7 +18,6 @@ def get_english_words():
     except Exception as e:
         print(f"Произошла ошибка при получении слова: {e}")
         return None
-
 
 def translate_to_russian(english_word, word_definition):
     try:
@@ -47,7 +45,6 @@ def translate_to_russian(english_word, word_definition):
         except Exception as alt_e:
             print(f"Ошибка при переводе с помощью deep_translator: {alt_e}")
             return None, None
-
 
 def word_game():
     print("**Добро пожаловать в игру**")
@@ -79,6 +76,5 @@ def word_game():
         if play_again.lower() != "y":
             print("**Спасибо за игру!**")
             break
-
 
 word_game()
